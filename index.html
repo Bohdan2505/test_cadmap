@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <title>Карта громади</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  
+<script src="https://unpkg.com/imask"></script>
+
+ <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+   integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
+   crossorigin=""/>
+ <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+   integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+   crossorigin=""></script>
+
+<script src='https://unpkg.com/@turf/turf@6/turf.min.js'></script>
+
+<link rel="stylesheet" href="leaflet-search.css" />
+<script src="leaflet-search.js"></script>
+
+<link rel="stylesheet" href="https://rawcdn.githack.com/jjimenezshaw/Leaflet.Control.Layers.Tree/2f4a0963618fda6f6276ad6bb65d989eeaf7dcc1/L.Control.Layers.Tree.css" />
+<script src="https://rawcdn.githack.com/jjimenezshaw/Leaflet.Control.Layers.Tree/2f4a0963618fda6f6276ad6bb65d989eeaf7dcc1/L.Control.Layers.Tree.js"></script>
+
+
+<link rel="stylesheet" href="https://unpkg.com/@geoman-io/leaflet-geoman-free@latest/dist/leaflet-geoman.css" />
+<script src="https://unpkg.com/@geoman-io/leaflet-geoman-free@latest/dist/leaflet-geoman.min.js"></script>  
+
+
+<script src="canvas_pattern_for_dom_el.js" defer></script>
+<script src="stripes_patterns.js" defer></script>
+
+  
+<script src="parcels.js"></script>
+<script src="IKK.js"></script>
+
+
+<script src="FileSaver.js" defer></script>
+<script src="leaflet-map.js" defer></script>
+
+<script src="geoman-map.js" defer></script>
+<script src="upload_layer.js" defer></script>
+<script src="create_new_layer.js" defer></script>
+  
+  </head>
+  <body>
+   <div id="map">
+   </div>
+
+<div id="popup_window" class="overlay">
+	
+</div>
+
+  </body>
+
+     <style>
+      .legend_info_container {
+    z-index:5;
+    bottom: 0;
+    width: 250px;
+    height: 300px; 
+    background-color: white;
+}
+     
+     
+ .info_container {
+    z-index:5;
+     position: relative;  
+    left: 0; 
+
+     top: 0; 
+    width: 250px;
+    height: 300px; 
+    background-color: white;
+    
+
+}
+.info_header {
+
+    background-color: #03f8fc;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.info-select{
+background-color: white;
+}
+
+#info_selector {
+width: 100%;
+
+}
+
+#legend_selector {
+width: 100%;
+
+}
+
+.info_content {
+  position: absolute;
+  left: 0;
+  right: 0;
+/*        width: 250px; */
+      height: 230px; 
+     overflow: auto; 
+margin:3%;
+  background: white;
+}
+
+.tab {
+  float: left;
+  overflow: auto;
+}
+.tab label {
+
+   display: inline-block; 
+
+overflow: auto;
+  background: #ddd; 
+  padding: 5px; 
+  border: 1px solid #ccc;
+  cursor: pointer;
+  margin-left: -1px; 
+}
+.tab:first-child label {
+  margin-left: 0;
+}
+.tab input[type=radio] {
+  display: none;   
+}
+.tab-content {
+  position: absolute;
+  left: 0;
+  right: 0;
+       width: 250px;
+     height: 290px; 
+     overflow: auto; 
+padding:3%;
+  background: white;
+
+  display: none;
+}
+input[type=radio]:checked ~ label {
+  background: white;
+  border-bottom: 1px solid white;
+}
+input[type=radio]:checked ~ label ~ .tab-content {
+  display: block;
+}
+    
+    </style>
+    
+      <style>
+     #map { position:absolute; top:0; left:0; bottom:0; right:0; height:100%; width:100%; z-index: 1;} 
+     .leaflet-grab { cursor: auto; }
+    .leaflet-dragging .leaflet-grab{ cursor: move; }
+.leaflet-fade-anim .leaflet-tile,.leaflet-zoom-anim .leaflet-zoom-animated { will-change:auto !important; }
+.leaflet-container {font: 14px/16px Arial, Helvetica, sans-serif;}!important
+    </style>
+
+    
+<!--     POPUP window style -->
+<style>
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 1;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+  z-index: 1;
+}
+
+.popup {
+  margin: 20px auto;
+  padding: 10px;
+  background: #fff;
+  
+  max-height: 80%;
+  overflow: auto; 
+  border-radius: 5px;
+  width: 60%;
+  position: relative;
+}
+
+.popup h2 {
+  margin-top: 0;
+  color: #000;
+  font-family: Tahoma, Arial, sans-serif;
+}
+.popup .close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #000;
+}
+.popup .close:hover {
+  color: #06D85F;
+}
+.popup .content {
+  max-height: 50%;
+  overflow: auto;
+}
+
+.popup table, .popup td, .popup th {
+  border: 1px solid;
+}
+
+.control-icon.hand-pointer {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3C!--! Font Awesome Pro 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --%3E%3Cpath d='M128 40c0-22.1 17.9-40 40-40s40 17.9 40 40V188.2c8.5-7.6 19.7-12.2 32-12.2c25.3 0 46 19.5 47.9 44.3c8.5-7.7 19.8-12.3 32.1-12.3c25.3 0 46 19.5 47.9 44.3c8.5-7.7 19.8-12.3 32.1-12.3c26.5 0 48 21.5 48 48v32 64c0 70.7-57.3 128-128 128l-16 0H240l-.1 0h-5.2c-5 0-9.9-.3-14.7-1c-55.3-5.6-106.2-34-140-79L8 336c-13.3-17.7-9.7-42.7 8-56s42.7-9.7 56 8l56 74.7V40zM240 304c0-8.8-7.2-16-16-16s-16 7.2-16 16v96c0 8.8 7.2 16 16 16s16-7.2 16-16V304zm48-16c-8.8 0-16 7.2-16 16v96c0 8.8 7.2 16 16 16s16-7.2 16-16V304c0-8.8-7.2-16-16-16zm80 16c0-8.8-7.2-16-16-16s-16 7.2-16 16v96c0 8.8 7.2 16 16 16s16-7.2 16-16V304z'/%3E%3C/svg%3E");
+}
+</style>
+</html>
