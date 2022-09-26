@@ -198,6 +198,12 @@ function change_geoman_map_events () {
     map.pm.setGlobalOptions({layerGroup:drawn_layer_feature_group, panes: {vertexPane: 'Geoman_marker', layerPane: 'Geoman', markerPane: 'Geoman_marker'}})
     console.log(drawn_layer_feature_group)
     
+    map.removeEventListener('pm:create')
+    drawn_layer_feature_group.removeEventListener('pm:update')
+    drawn_layer_feature_group.removeEventListener('pm:markerdrag')
+    drawn_layer_feature_group.removeEventListener('pm:cut')
+    drawn_layer_feature_group.removeEventListener('pm:edit')
+    drawn_layer_feature_group.removeEventListener('pm:remove')
     
     map.on('pm:create', e=> {
         if (edit_layers_id_list.length === 1 && edit_layers_id_list[0] === 'LayerDrawnByGeoman') {
