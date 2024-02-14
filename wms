@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE WMT_MS_Capabilities SYSTEM "http://schemas.opengis.net/wms/1.1.1/capabilities_1_1_1.dtd" >
+<WMT_MS_Capabilities version="1.1.1">
+<Service>
+  <Name>OGC:WMS</Name>
+  <Title>GeoWebCache</Title>
+  <Abstract>GeoWebCache is an advanced tile cache for WMS servers.It supports a large variety of protocols and formats, including WMS-C, WMTS, KML, Google Maps and Virtual Earth.</Abstract>
+  <KeywordList>
+    <Keyword>WFS</Keyword>
+    <Keyword>WMS</Keyword>
+    <Keyword>WMTS</Keyword>
+    <Keyword>GEOWEBCACHE</Keyword>
+  </KeywordList>
+  <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://reg.dar.gov.ua/sarapi/api/geowebcache/wms?SERVICE=WMS&amp;"/>
+  <ContactInformation>
+    <ContactPersonPrimary>
+      <ContactPerson>Any OK</ContactPerson>
+      <ContactOrganization>Any Ok inc.</ContactOrganization>
+    </ContactPersonPrimary>
+    <ContactPosition>Geospatial Expert</ContactPosition>
+    <ContactAddress>
+      <AddressType>Work</AddressType>
+      <Address>Lobanovskiy St.</Address>
+      <City>SLCC</City>
+      <StateOrProvince>TAS</StateOrProvince>
+      <PostCode>01040</PostCode>
+      <Country>Ukraine</Country>
+    </ContactAddress>
+    <ContactVoiceTelephone>+61 3 0000 0000</ContactVoiceTelephone>
+    <ContactFacsimileTelephone>+61 3 0000 0001</ContactFacsimileTelephone>
+    <ContactElectronicMailAddress>anyok@yahoo.com</ContactElectronicMailAddress>
+  </ContactInformation>
+  <Fees>NONE</Fees>
+  <AccessConstraints>NONE</AccessConstraints>
+</Service>
+<Capability>
+  <Request>
+    <GetCapabilities>
+      <Format>application/vnd.ogc.wms_xml</Format>
+      <DCPType>
+        <HTTP>
+          <Get>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://reg.dar.gov.ua/sarapi/api/geowebcache/wms?SERVICE=WMS&amp;"/>
+          </Get>
+        </HTTP>
+      </DCPType>
+    </GetCapabilities>
+    <GetMap>
+      <Format>image/png</Format>
+      <DCPType>
+        <HTTP>
+          <Get>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://reg.dar.gov.ua/sarapi/api/geowebcache/wms?SERVICE=WMS&amp;"/>
+          </Get>
+        </HTTP>
+      </DCPType>
+    </GetMap>
+    <GetFeatureInfo>
+      <Format>text/plain</Format>
+      <Format>text/html</Format>
+      <Format>application/vnd.ogc.gml</Format>
+      <DCPType>
+        <HTTP>
+        <Get>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://reg.dar.gov.ua/sarapi/api/geowebcache/wms?SERVICE=WMS&amp;"/>
+        </Get>
+        </HTTP>
+      </DCPType>
+    </GetFeatureInfo>
+    <DescribeLayer>
+      <Format>application/vnd.ogc.wms_xml</Format>
+      <DCPType>
+        <HTTP>
+        <Get>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://reg.dar.gov.ua/sarapi/api/geowebcache/wms?SERVICE=WMS&amp;"/>
+        </Get>
+        </HTTP>
+      </DCPType>
+    </DescribeLayer>
+    <GetLegendGraphic>
+      <Format>image/png</Format>
+      <Format>image/jpeg</Format>
+      <Format>image/gif</Format>
+      <DCPType>
+        <HTTP>
+        <Get>
+          <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://reg.dar.gov.ua/sarapi/api/geowebcache/wms?SERVICE=WMS&amp;"/>
+        </Get>
+        </HTTP>
+      </DCPType>
+    </GetLegendGraphic>
+  </Request>
+  <Exception>
+    <Format>application/vnd.ogc.se_xml</Format>
+  </Exception>
+  <Layer>
+    <Title>GeoWebCache WMS</Title>
+    <Abstract>Note that not all GeoWebCache instances provide a full WMS service.</Abstract>
+    <LatLonBoundingBox minx="-180.0" miny="-90.0" maxx="180.0" maxy="90.0"/>
+    <Layer>
+      <Name>kadastr</Name>
+      <Title>kadastr</Title>
+      <SRS>EPSG:3857</SRS>
+      <CRS></CRS>
+      <BoundingBox SRS="EPSG:900913" minx="1252344.2712499984" miny="3757032.813749999" maxx="6261721.356249999" maxy="7514065.627500001"/>
+    </Layer>
+    <Layer>
+      <Name>admin</Name>
+      <Title>admin</Title>
+      <SRS>EPSG:900913</SRS>
+      <BoundingBox SRS="EPSG:900913" minx="0.0" miny="0.0" maxx="1.0018754169999998E7" maxy="1.0018754169999998E7"/>
+    </Layer>
+    <Layer>
+      <Name>grunt</Name>
+      <Title>grunt</Title>
+      <SRS>EPSG:900913</SRS>
+      <BoundingBox SRS="EPSG:900913" minx="0.0" miny="0.0" maxx="1.0018754169999998E7" maxy="1.0018754169999998E7"/>
+    </Layer>
+    <Layer>
+      <Name>atu</Name>
+      <Title>atu</Title>
+      <SRS>EPSG:900913</SRS>
+      <BoundingBox SRS="EPSG:900913" minx="0.0" miny="0.0" maxx="1.0018754169999998E7" maxy="1.0018754169999998E7"/>
+    </Layer>
+    <Layer>
+      <Name>kadastr_arch</Name>
+      <Title>kadastr_arch</Title>
+      <SRS>EPSG:900913</SRS>
+      <BoundingBox SRS="EPSG:900913" minx="0.0" miny="0.0" maxx="1.0018754169999998E7" maxy="1.0018754169999998E7"/>
+    </Layer>
+    <Layer>
+      <Name>restriction</Name>
+      <Title>restriction</Title>
+      <SRS>EPSG:900913</SRS>
+      <BoundingBox SRS="EPSG:900913" minx="0.0" miny="0.0" maxx="1.0018754169999998E7" maxy="1.0018754169999998E7"/>
+    </Layer>
+    <Layer>
+      <Name>pcm_nsdi_river_buffer</Name>
+      <Title>pcm_nsdi_river_buffer</Title>
+      <SRS>EPSG:900913</SRS>
+      <BoundingBox SRS="EPSG:900913" minx="1252344.2712499984" miny="5009377.085000001" maxx="5009377.085000001" maxy="7514065.627500001"/>
+    </Layer>
+    <Layer>
+      <Name>pcm_nsdi_forest</Name>
+      <Title>pcm_nsdi_forest</Title>
+      <SRS>EPSG:900913</SRS>
+      <BoundingBox SRS="EPSG:900913" minx="1252344.2712499984" miny="5009377.085000001" maxx="5009377.085000001" maxy="7514065.627500001"/>
+    </Layer>
+    <Layer>
+      <Name>pcm_nsdi_pzf</Name>
+      <Title>pcm_nsdi_pzf</Title>
+      <SRS>EPSG:900913</SRS>
+      <BoundingBox SRS="EPSG:900913" minx="1252344.2712499984" miny="5009377.085000001" maxx="5009377.085000001" maxy="7514065.627500001"/>
+    </Layer>
+    <Layer>
+      <Name>pcm_nsdi_sm_merega</Name>
+      <Title>pcm_nsdi_sm_merega</Title>
+      <SRS>EPSG:900913</SRS>
+      <BoundingBox SRS="EPSG:900913" minx="1252344.2712499984" miny="5009377.085000001" maxx="5009377.085000001" maxy="7514065.627500001"/>
+    </Layer>
+    <Layer>
+      <Name>pcm_srada_parcel_hole</Name>
+      <Title>pcm_srada_parcel_hole</Title>
+      <SRS>EPSG:900913</SRS>
+      <BoundingBox SRS="EPSG:900913" minx="0.0" miny="5009377.085000001" maxx="5009377.085000001" maxy="1.0018754169999998E7"/>
+    </Layer>
+    <Layer>
+      <Name>pcm_specdozvil</Name>
+      <Title>pcm_specdozvil</Title>
+      <SRS>EPSG:900913</SRS>
+      <BoundingBox SRS="EPSG:900913" minx="0.0" miny="5009377.085000001" maxx="5009377.085000001" maxy="1.0018754169999998E7"/>
+    </Layer>
+    <Layer>
+      <Name>pcm_slcc_check</Name>
+      <Title>pcm_slcc_check</Title>
+      <SRS>EPSG:900913</SRS>
+      <BoundingBox SRS="EPSG:900913" minx="0.0" miny="5009377.085000001" maxx="5009377.085000001" maxy="1.0018754169999998E7"/>
+    </Layer>
+    <Layer>
+      <Name>pcm_rodovysha_korys_kop</Name>
+      <Title>pcm_rodovysha_korys_kop</Title>
+      <SRS>EPSG:900913</SRS>
+      <BoundingBox SRS="EPSG:900913" minx="0.0" miny="5009377.085000001" maxx="5009377.085000001" maxy="1.0018754169999998E7"/>
+    </Layer>
+    <Layer>
+      <Name>pcm_naftogaz_sverdlovini</Name>
+      <Title>pcm_naftogaz_sverdlovini</Title>
+      <SRS>EPSG:900913</SRS>
+      <BoundingBox SRS="EPSG:900913" minx="0.0" miny="5009377.085000001" maxx="5009377.085000001" maxy="1.0018754169999998E7"/>
+    </Layer>
+    <Layer>
+      <Name>pcm_nsdi_land_conservation</Name>
+      <Title>pcm_nsdi_land_conservation</Title>
+      <SRS>EPSG:900913</SRS>
+      <BoundingBox SRS="EPSG:900913" minx="0.0" miny="5009377.085000001" maxx="5009377.085000001" maxy="1.0018754169999998E7"/>
+    </Layer>
+    <Layer>
+      <Name>pcm_nsdi_wetlands</Name>
+      <Title>pcm_nsdi_wetlands</Title>
+      <SRS>EPSG:900913</SRS>
+      <BoundingBox SRS="EPSG:900913" minx="0.0" miny="5009377.085000001" maxx="5009377.085000001" maxy="1.0018754169999998E7"/>
+    </Layer>
+    <Layer>
+      <Name>pcm_nsdi_ksp_l</Name>
+      <Title>pcm_nsdi_ksp_l</Title>
+      <SRS>EPSG:900913</SRS>
+      <BoundingBox SRS="EPSG:900913" minx="0.0" miny="5009377.085000001" maxx="5009377.085000001" maxy="1.0018754169999998E7"/>
+    </Layer>
+    <Layer>
+      <Name>pcm_border</Name>
+      <Title>pcm_border</Title>
+      <SRS>EPSG:900913</SRS>
+      <BoundingBox SRS="EPSG:900913" minx="0.0" miny="5009377.085000001" maxx="5009377.085000001" maxy="1.0018754169999998E7"/>
+    </Layer>
+    <Layer>
+      <Name>pcm_natural_and_agricultural_zoning</Name>
+      <Title>pcm_natural_and_agricultural_zoning</Title>
+      <SRS>EPSG:900913</SRS>
+      <BoundingBox SRS="EPSG:900913" minx="0.0" miny="5009377.085000001" maxx="5009377.085000001" maxy="1.0018754169999998E7"/>
+    </Layer>
+    <Layer>
+      <Name>pcm_soil_agricultural_groups_gl</Name>
+      <Title>pcm_soil_agricultural_groups_gl</Title>
+      <SRS>EPSG:900913</SRS>
+      <BoundingBox SRS="EPSG:900913" minx="0.0" miny="5009377.085000001" maxx="5009377.085000001" maxy="1.0018754169999998E7"/>
+    </Layer>
+  </Layer>
+</Capability>
+</WMT_MS_Capabilities>
