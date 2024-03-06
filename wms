@@ -100,9 +100,8 @@
     <Layer>
       <Name>kadastr</Name>
       <Title>kadastr</Title>
-      <CRS>EPSG:3857</CRS>
       <SRS>EPSG:900913</SRS>
-      <BoundingBox SRS="EPSG:900913" minx="1252344.2712499984" miny="3757032.813749999" maxx="6261721.356249999" maxy="7514065.627500001"/>
+      <BoundingBox SRS="EPSG:900913" minx="0.0" miny="0.0" maxx="1.0018754169999998E7" maxy="1.0018754169999998E7"/>
     </Layer>
     <Layer>
       <Name>admin</Name>
