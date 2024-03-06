@@ -100,128 +100,128 @@
     <Layer>
       <Name>kadastr</Name>
       <Title>kadastr</Title>
-      <SRS>EPSG:900913</SRS>
-      <BoundingBox SRS="EPSG:900913" minx="0.0" miny="0.0" maxx="1.0018754169999998E7" maxy="1.0018754169999998E7"/>
+      <CRS>EPSG:3857</CRS>
+      <BoundingBox CRS="EPSG:900913" minx="0.0" miny="0.0" maxx="1.0018754169999998E7" maxy="1.0018754169999998E7"/>
     </Layer>
     <Layer>
       <Name>admin</Name>
       <Title>admin</Title>
-      <SRS>EPSG:900913</SRS>
-      <BoundingBox SRS="EPSG:900913" minx="0.0" miny="0.0" maxx="1.0018754169999998E7" maxy="1.0018754169999998E7"/>
+      <CRS>EPSG:900913</CRS>
+      <BoundingBox CRS="EPSG:900913" minx="0.0" miny="0.0" maxx="1.0018754169999998E7" maxy="1.0018754169999998E7"/>
     </Layer>
     <Layer>
       <Name>grunt</Name>
       <Title>grunt</Title>
-      <SRS>EPSG:900913</SRS>
-      <BoundingBox SRS="EPSG:900913" minx="0.0" miny="0.0" maxx="1.0018754169999998E7" maxy="1.0018754169999998E7"/>
+      <CRS>EPSG:900913</CRS>
+      <BoundingBox CRS="EPSG:900913" minx="0.0" miny="0.0" maxx="1.0018754169999998E7" maxy="1.0018754169999998E7"/>
     </Layer>
     <Layer>
       <Name>atu</Name>
       <Title>atu</Title>
-      <SRS>EPSG:900913</SRS>
-      <BoundingBox SRS="EPSG:900913" minx="0.0" miny="0.0" maxx="1.0018754169999998E7" maxy="1.0018754169999998E7"/>
+      <CRS>EPSG:900913</CRS>
+      <BoundingBox CRS="EPSG:900913" minx="0.0" miny="0.0" maxx="1.0018754169999998E7" maxy="1.0018754169999998E7"/>
     </Layer>
     <Layer>
       <Name>kadastr_arch</Name>
       <Title>kadastr_arch</Title>
-      <SRS>EPSG:900913</SRS>
-      <BoundingBox SRS="EPSG:900913" minx="0.0" miny="0.0" maxx="1.0018754169999998E7" maxy="1.0018754169999998E7"/>
+      <CRS>EPSG:900913</CRS>
+      <BoundingBox CRS="EPSG:900913" minx="0.0" miny="0.0" maxx="1.0018754169999998E7" maxy="1.0018754169999998E7"/>
     </Layer>
     <Layer>
       <Name>restriction</Name>
       <Title>restriction</Title>
-      <SRS>EPSG:900913</SRS>
-      <BoundingBox SRS="EPSG:900913" minx="0.0" miny="0.0" maxx="1.0018754169999998E7" maxy="1.0018754169999998E7"/>
+      <CRS>EPSG:900913</CRS>
+      <BoundingBox CRS="EPSG:900913" minx="0.0" miny="0.0" maxx="1.0018754169999998E7" maxy="1.0018754169999998E7"/>
     </Layer>
     <Layer>
       <Name>pcm_nsdi_river_buffer</Name>
       <Title>pcm_nsdi_river_buffer</Title>
-      <SRS>EPSG:900913</SRS>
-      <BoundingBox SRS="EPSG:900913" minx="1252344.2712499984" miny="5009377.085000001" maxx="5009377.085000001" maxy="7514065.627500001"/>
+      <CRS>EPSG:900913</CRS>
+      <BoundingBox CRS="EPSG:900913" minx="1252344.2712499984" miny="5009377.085000001" maxx="5009377.085000001" maxy="7514065.627500001"/>
     </Layer>
     <Layer>
       <Name>pcm_nsdi_forest</Name>
       <Title>pcm_nsdi_forest</Title>
-      <SRS>EPSG:900913</SRS>
-      <BoundingBox SRS="EPSG:900913" minx="1252344.2712499984" miny="5009377.085000001" maxx="5009377.085000001" maxy="7514065.627500001"/>
+      <CRS>EPSG:900913</CRS>
+      <BoundingBox CRS="EPSG:900913" minx="1252344.2712499984" miny="5009377.085000001" maxx="5009377.085000001" maxy="7514065.627500001"/>
     </Layer>
     <Layer>
       <Name>pcm_nsdi_pzf</Name>
       <Title>pcm_nsdi_pzf</Title>
-      <SRS>EPSG:900913</SRS>
-      <BoundingBox SRS="EPSG:900913" minx="1252344.2712499984" miny="5009377.085000001" maxx="5009377.085000001" maxy="7514065.627500001"/>
+      <CRS>EPSG:900913</CRS>
+      <BoundingBox CRS="EPSG:900913" minx="1252344.2712499984" miny="5009377.085000001" maxx="5009377.085000001" maxy="7514065.627500001"/>
     </Layer>
     <Layer>
       <Name>pcm_nsdi_sm_merega</Name>
       <Title>pcm_nsdi_sm_merega</Title>
-      <SRS>EPSG:900913</SRS>
-      <BoundingBox SRS="EPSG:900913" minx="1252344.2712499984" miny="5009377.085000001" maxx="5009377.085000001" maxy="7514065.627500001"/>
+      <CRS>EPSG:900913</CRS>
+      <BoundingBox CRS="EPSG:900913" minx="1252344.2712499984" miny="5009377.085000001" maxx="5009377.085000001" maxy="7514065.627500001"/>
     </Layer>
     <Layer>
       <Name>pcm_srada_parcel_hole</Name>
       <Title>pcm_srada_parcel_hole</Title>
-      <SRS>EPSG:900913</SRS>
-      <BoundingBox SRS="EPSG:900913" minx="0.0" miny="5009377.085000001" maxx="5009377.085000001" maxy="1.0018754169999998E7"/>
+      <CRS>EPSG:900913</CRS>
+      <BoundingBox CRS="EPSG:900913" minx="0.0" miny="5009377.085000001" maxx="5009377.085000001" maxy="1.0018754169999998E7"/>
     </Layer>
     <Layer>
       <Name>pcm_specdozvil</Name>
       <Title>pcm_specdozvil</Title>
-      <SRS>EPSG:900913</SRS>
-      <BoundingBox SRS="EPSG:900913" minx="0.0" miny="5009377.085000001" maxx="5009377.085000001" maxy="1.0018754169999998E7"/>
+      <CRS>EPSG:900913</CRS>
+      <BoundingBox CRS="EPSG:900913" minx="0.0" miny="5009377.085000001" maxx="5009377.085000001" maxy="1.0018754169999998E7"/>
     </Layer>
     <Layer>
       <Name>pcm_slcc_check</Name>
       <Title>pcm_slcc_check</Title>
-      <SRS>EPSG:900913</SRS>
-      <BoundingBox SRS="EPSG:900913" minx="0.0" miny="5009377.085000001" maxx="5009377.085000001" maxy="1.0018754169999998E7"/>
+      <CRS>EPSG:900913</CRS>
+      <BoundingBox CRS="EPSG:900913" minx="0.0" miny="5009377.085000001" maxx="5009377.085000001" maxy="1.0018754169999998E7"/>
     </Layer>
     <Layer>
       <Name>pcm_rodovysha_korys_kop</Name>
       <Title>pcm_rodovysha_korys_kop</Title>
-      <SRS>EPSG:900913</SRS>
-      <BoundingBox SRS="EPSG:900913" minx="0.0" miny="5009377.085000001" maxx="5009377.085000001" maxy="1.0018754169999998E7"/>
+      <CRS>EPSG:900913</CRS>
+      <BoundingBox CRS="EPSG:900913" minx="0.0" miny="5009377.085000001" maxx="5009377.085000001" maxy="1.0018754169999998E7"/>
     </Layer>
     <Layer>
       <Name>pcm_naftogaz_sverdlovini</Name>
       <Title>pcm_naftogaz_sverdlovini</Title>
-      <SRS>EPSG:900913</SRS>
-      <BoundingBox SRS="EPSG:900913" minx="0.0" miny="5009377.085000001" maxx="5009377.085000001" maxy="1.0018754169999998E7"/>
+      <CRS>EPSG:900913</CRS>
+      <BoundingBox CRS="EPSG:900913" minx="0.0" miny="5009377.085000001" maxx="5009377.085000001" maxy="1.0018754169999998E7"/>
     </Layer>
     <Layer>
       <Name>pcm_nsdi_land_conservation</Name>
       <Title>pcm_nsdi_land_conservation</Title>
-      <SRS>EPSG:900913</SRS>
-      <BoundingBox SRS="EPSG:900913" minx="0.0" miny="5009377.085000001" maxx="5009377.085000001" maxy="1.0018754169999998E7"/>
+      <CRS>EPSG:900913</CRS>
+      <BoundingBox CRS="EPSG:900913" minx="0.0" miny="5009377.085000001" maxx="5009377.085000001" maxy="1.0018754169999998E7"/>
     </Layer>
     <Layer>
       <Name>pcm_nsdi_wetlands</Name>
       <Title>pcm_nsdi_wetlands</Title>
-      <SRS>EPSG:900913</SRS>
-      <BoundingBox SRS="EPSG:900913" minx="0.0" miny="5009377.085000001" maxx="5009377.085000001" maxy="1.0018754169999998E7"/>
+      <CRS>EPSG:900913</CRS>
+      <BoundingBox CRS="EPSG:900913" minx="0.0" miny="5009377.085000001" maxx="5009377.085000001" maxy="1.0018754169999998E7"/>
     </Layer>
     <Layer>
       <Name>pcm_nsdi_ksp_l</Name>
       <Title>pcm_nsdi_ksp_l</Title>
-      <SRS>EPSG:900913</SRS>
-      <BoundingBox SRS="EPSG:900913" minx="0.0" miny="5009377.085000001" maxx="5009377.085000001" maxy="1.0018754169999998E7"/>
+      <CRS>EPSG:900913</CRS>
+      <BoundingBox CRS="EPSG:900913" minx="0.0" miny="5009377.085000001" maxx="5009377.085000001" maxy="1.0018754169999998E7"/>
     </Layer>
     <Layer>
       <Name>pcm_border</Name>
       <Title>pcm_border</Title>
-      <SRS>EPSG:900913</SRS>
-      <BoundingBox SRS="EPSG:900913" minx="0.0" miny="5009377.085000001" maxx="5009377.085000001" maxy="1.0018754169999998E7"/>
+      <CRS>EPSG:900913</CRS>
+      <BoundingBox CRS="EPSG:900913" minx="0.0" miny="5009377.085000001" maxx="5009377.085000001" maxy="1.0018754169999998E7"/>
     </Layer>
     <Layer>
       <Name>pcm_natural_and_agricultural_zoning</Name>
       <Title>pcm_natural_and_agricultural_zoning</Title>
-      <SRS>EPSG:900913</SRS>
-      <BoundingBox SRS="EPSG:900913" minx="0.0" miny="5009377.085000001" maxx="5009377.085000001" maxy="1.0018754169999998E7"/>
+      <CRS>EPSG:900913</CRS>
+      <BoundingBox CRS="EPSG:900913" minx="0.0" miny="5009377.085000001" maxx="5009377.085000001" maxy="1.0018754169999998E7"/>
     </Layer>
     <Layer>
       <Name>pcm_soil_agricultural_groups_gl</Name>
       <Title>pcm_soil_agricultural_groups_gl</Title>
-      <SRS>EPSG:900913</SRS>
-      <BoundingBox SRS="EPSG:900913" minx="0.0" miny="5009377.085000001" maxx="5009377.085000001" maxy="1.0018754169999998E7"/>
+      <CRS>EPSG:900913</CRS>
+      <BoundingBox CRS="EPSG:900913" minx="0.0" miny="5009377.085000001" maxx="5009377.085000001" maxy="1.0018754169999998E7"/>
     </Layer>
   </Layer>
 </Capability>
